@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+   
+    /* border: 1px solid red; */
+}
+html{
+    overflow: visible;
+    height: 100%;
+}
+
+
+#nav{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 20px;
+    
+}
+
+a {
+    background-color: #4CAF50;
+  border: 3px solid grey;
+  border-radius: 3px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#main{
+    margin: 100px auto 0 auto;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.user {
+    position: relative;
+    font-weight: 800;
+    font-size: 30px;
+    border: 2px solid grey;
+    border-radius: 3px;
+    margin-top: 30px;
+}
+
+.user img {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 10px;
+}
+
+.post {
+    font-weight: 800;
+    font-size: 30px;
+    border: 2px solid grey;
+    border-radius: 3px;
+    margin-top: 30px;
+    justify-content: center;
+    text-align: center;
+    white-space: initial;
+}
+
+.loginform {
+    width: 500px;
+  height: auto;
+  padding-bottom: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  border: 3px solid grey;
+  border-radius: 3px;
+}
+
+.loginform h1, .loginform div {
+    text-align: center;
+}
+
+.loginform button, .loginform a {
+    background-color: #4CAF50;
+  border: 3px solid grey;
+  border-radius: 3px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.time {
+    font-size: 15px;
+}
+
+.author {
+    color: grey;
+    font-style: italic;
+}
