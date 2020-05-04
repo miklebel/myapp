@@ -3,6 +3,7 @@ const router = express.Router();
 const jwt = require("jsonwebtoken");
 const passport = require("passport")
 const multer = require("multer");
+const jwtKey = process.env.KEY
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
       cb(null, './client/avatars')
@@ -34,7 +35,7 @@ router.post("/login", (req, res) => {
         } else {
             const token = jwt.sign({
                 id: success._id
-            }, "secretApiKey",
+            }, jwtKey,
              {expiresIn: "5h"})
             res.status(202).json({
                 success: true,

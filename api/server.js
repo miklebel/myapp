@@ -2,8 +2,9 @@ require('dotenv').config()
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const opn = require('opn')
 const bodyParser = require("body-parser");
-const indexRouter = require("./routes/index")
+
 const usersRouter = require("./routes/users")
 const postsRouter = require("./routes/posts")
 const app = express();
@@ -17,6 +18,7 @@ const db = require("./config/mongoKey").MongoURI;
 //connect to mongo
 mongoose.connect(db, { useNewUrlParser: true})
     .then(() => console.log("Database connected"))
+    .then(opn('http://localhost:4001/'))    
     .catch(err => console.log(err));
 app.use(express.static('client'));
 app.set("view-engine", "ejs");
